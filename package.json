@@ -1,6 +1,6 @@
 {
   "name": "meadowlark",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Tutorial from 'Web Develepment with Node and Express' by Ethan Brown",
   "main": "meadowlark.js",
   "scripts": {
