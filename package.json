@@ -1,0 +1,30 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "Tutorial from 'Web Develepment with Node and Express' by Ethan Brown",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.1",
+    "express-handlebars": "^1.1.0"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-cache": "^0.2.4",
+    "gulp-concat": "^2.4.3",
+    "gulp-imagemin": "^2.1.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-livereload": "^3.5.0",
+    "gulp-minify-css": "^0.4.2",
+    "gulp-notify": "^2.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^1.0.0-alpha.2",
+    "gulp-uglify": "^1.1.0"
+  }
+}
