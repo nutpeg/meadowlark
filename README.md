@@ -6,5 +6,3 @@ and is published by O'Reilly Media
 This is what you'll get if you follow along with the tutorial from [the book](http://shop.oreilly.com/product/0636920032977.do), with the one exception that the tutorial uses Grunt, while Gulp is used here. See the Ethan Brown's official repo [here](https://github.com/EthanRBrown/web-development-with-node-and-express).
 
 The book is very well written, and I can thoroughly recommend it (I have no affiliation with O'Reilly).
-
-

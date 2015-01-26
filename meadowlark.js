@@ -9,7 +9,10 @@ app.set('port', process.env.PORT || 3000);
 app.engine('handlebars', handlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
-
+app.use(function (req, res, next) {
+  res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
+  next();
+});
 
 
 // Home page
@@ -19,7 +22,9 @@ app.get('/', function (req, res) {
 
 // About page
 app.get('/about', function (req, res) {
-  res.render('about');
+  res.render('about', {
+    pageTestScript: '/qa/tests-about.js'
+  });
 });
 
 // custom 404 page
