@@ -28,6 +28,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^1.0.0-alpha.2",
     "gulp-uglify": "^1.1.0",
-    "mocha": "^2.1.0"
+    "mocha": "^2.1.0",
+    "zombie": "^2.5.1"
   }
 }
