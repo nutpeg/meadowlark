@@ -4,6 +4,7 @@ var express = require('express');
 var handlebars = require('express-handlebars');
 
 var app = express();
+var fortune = require('./lib/fortune.js');
 
 app.set('port', process.env.PORT || 3000);
 app.engine('handlebars', handlebars({defaultLayout: 'main'}));
@@ -23,6 +24,7 @@ app.get('/', function (req, res) {
 // About page
 app.get('/about', function (req, res) {
   res.render('about', {
+    fortune: fortune.getFortune(),
     pageTestScript: '/qa/tests-about.js'
   });
 });
