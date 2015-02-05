@@ -6,6 +6,9 @@ logs
 *.sublime-project
 *.sublime-workspace
 
+# Webstorm
+.idea
+
 # OsX
 .DS_Store
 Icon?
