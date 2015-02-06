@@ -1,5 +1,7 @@
-var Browser = require('zombie');
+'use strict';
+
 var assert = require('chai').assert;
+var Browser = require('zombie');
 
 var browser;
 
@@ -8,7 +10,7 @@ suite('Cross-page tests', function () {
     browser = new Browser();
   });
 
-  test('Requesting a group rate quote from the hood river tour page' + 
+  test('Requesting a group rate quote from the hood river tour page' +
        ' should populate the referrer field.', function (done) {
     var referrer = 'http://localhost:3030/tours/hood-river';
     browser.visit(referrer, function () {
@@ -38,5 +40,4 @@ suite('Cross-page tests', function () {
       done();
     });
   });
-  
 });

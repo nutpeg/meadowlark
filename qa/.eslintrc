@@ -1,0 +1,7 @@
+{
+    "globals": {
+        "suite": true,
+        "setup": true,
+        "test": true
+    }
+}
