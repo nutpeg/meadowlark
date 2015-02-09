@@ -2,11 +2,12 @@
 
 var $ = require('gulp-load-plugins')({ lazy: true });
 var args = require('yargs').argv;
-var config = require('./gulpconfig');
+var gulpconfig = require('./gulp.config');
+// var appconfig = require('./app.config');
 var Crawler = require('simplecrawler');
 var gulp = require('gulp');
 
-var port = process.env.PORT || config.defaultPort;
+var port = gulpconfig.defaultPort;
 var crawler = new Crawler('localhost', '/', port);
 // Utility functions
 
@@ -44,7 +45,7 @@ gulp.task('checklinks', function(done) {
 gulp.task('lint', function() {
   log('Linting JS files');
   return gulp
-      .src(config.alljs)
+      .src(gulpconfig.alljs)
       .pipe($.if(args.verbose, $.print()))
       .pipe($.eslint())
       .pipe($.eslint.format())
@@ -55,13 +56,13 @@ gulp.task('serve-dev', function() {
   var isDev = true;
 
   var nodeOptions = {
-    script: config.nodeServer,  // define the node script to start the server
+    script: gulpconfig.nodeServer,  // define the node script to start the server
     delayTime: 1,
     env: {
       'PORT': port,
       'NODE_ENV': isDev ? 'dev' : 'build'
     },
-    watch: [config.server]   // define the files on which to restart server when changed
+    watch: [gulpconfig.server]   // define the files on which to restart server when changed
   };
 
   return $.nodemon(nodeOptions)

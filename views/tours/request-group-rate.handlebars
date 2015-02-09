@@ -7,7 +7,9 @@
   <input type="submit" value="Submit">
 </form>
 <script>
+  /*global $ */
   $(document).ready(function () {
+    'use strict';
     $('input[name="referrer"]').val(document.referrer);
-  })
+  });
 </script>

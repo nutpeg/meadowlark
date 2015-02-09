@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "browser-sync": "browser-sync",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "mocha": "mocha"
   },
   "repository": "https://github.com/wiredforpictures/meadowlark",
   "author": "",

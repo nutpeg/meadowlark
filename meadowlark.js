@@ -4,9 +4,10 @@ var express = require('express');
 var fortune = require('./lib/fortune.js');
 var handlebars = require('express-handlebars');
 var path = require('path');
+var appconfig = require('./app.config');
 
 var app = express();
-var port = process.env.PORT || 3030;
+var port = appconfig.port;
 
 app.set('port', port);
 app.engine('handlebars', handlebars({defaultLayout: 'main'}));
